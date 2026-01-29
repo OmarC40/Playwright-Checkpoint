@@ -1,5 +1,7 @@
-const {test, expect} = require('@playwright/test');
-const {POManager} = require('../pageobjects/POManager');
+import { test, expect } from '@playwright/test';
+import { POManager } from '../pageobjects/POManager';
+
+
 //const { DashboardPage } = require('../pageobjects/DashboardPage');
 const dataset =  JSON.parse(JSON.stringify(require("../utils/TestDataLoginPage.json")));
 

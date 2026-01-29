@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "C:\\Users\\cuare\\Playwright-Checkpoint\\playwright.config.ts",
-    "rootDir": "C:/Users/cuare/Playwright-Checkpoint",
+    "configFile": "C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\playwright.config.ts",
+    "rootDir": "C:/Users/ocuarenta/Desktop/Checkpoint Playwright/Playwright-Checkpoint",
     "forbidOnly": false,
     "fullyParallel": false,
     "globalSetup": null,
@@ -16,7 +16,7 @@
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "C:/Users/cuare/Playwright-Checkpoint/test-results",
+        "outputDir": "C:/Users/ocuarenta/Desktop/Checkpoint Playwright/Playwright-Checkpoint/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -24,7 +24,7 @@
         },
         "id": "",
         "name": "",
-        "testDir": "C:/Users/cuare/Playwright-Checkpoint",
+        "testDir": "C:/Users/ocuarenta/Desktop/Checkpoint Playwright/Playwright-Checkpoint",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -87,7 +87,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 30353,
+                  "duration": 30208,
                   "error": {
                     "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
@@ -98,33 +98,28 @@
                     },
                     {
                       "location": {
-                        "file": "C:\\Users\\cuare\\Playwright-Checkpoint\\tests\\UIBasicstest.spec.js",
+                        "file": "C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\tests\\UIBasicstest.spec.js",
                         "column": 39,
                         "line": 23
                       },
-                      "message": "Error: locator.fill: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('input#input')\u001b[22m\n\n\n\u001b[0m \u001b[90m 21 |\u001b[39m     \u001b[90m//rules for locator: if the ID is present css -> tagname#id or #id\u001b[39m\n \u001b[90m 22 |\u001b[39m    \u001b[90m// await page.locator('input#input').type(\"playwright\") deprecated\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'input#input'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m\"rahulshetty\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"[type='password']\"\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m\"learning\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m signIn\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"[style*='block']\"\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Incorrect'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\cuare\\Playwright-Checkpoint\\tests\\UIBasicstest.spec.js:23:39\u001b[22m"
+                      "message": "Error: locator.fill: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('input#input')\u001b[22m\n\n\n\u001b[0m \u001b[90m 21 |\u001b[39m     \u001b[90m//rules for locator: if the ID is present css -> tagname#id or #id\u001b[39m\n \u001b[90m 22 |\u001b[39m    \u001b[90m// await page.locator('input#input').type(\"playwright\") deprecated\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'input#input'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m\"rahulshetty\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"[type='password']\"\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m\"learning\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m signIn\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"[style*='block']\"\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Incorrect'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\tests\\UIBasicstest.spec.js:23:39\u001b[22m"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-01-29T20:59:33.211Z",
+                  "startTime": "2026-01-29T21:28:21.552Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "C:\\Users\\cuare\\Playwright-Checkpoint\\test-results\\tests-UIBasicstest-First-Playwright-Test\\test-failed-1.png"
+                      "path": "C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\test-results\\tests-UIBasicstest-First-Playwright-Test\\test-failed-1.png"
                     },
                     {
                       "name": "error-context",
                       "contentType": "text/markdown",
-                      "path": "C:\\Users\\cuare\\Playwright-Checkpoint\\test-results\\tests-UIBasicstest-First-Playwright-Test\\error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\cuare\\Playwright-Checkpoint\\test-results\\tests-UIBasicstest-First-Playwright-Test\\trace.zip"
+                      "path": "C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\test-results\\tests-UIBasicstest-First-Playwright-Test\\error-context.md"
                     }
                   ]
                 }
@@ -142,8 +137,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-01-29T20:59:30.800Z",
-    "duration": 35097.66,
+    "startTime": "2026-01-29T21:28:17.707Z",
+    "duration": 39975.749,
     "expected": 0,
     "skipped": 0,
     "unexpected": 1,

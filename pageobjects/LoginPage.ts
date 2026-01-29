@@ -1,8 +1,15 @@
-class LoginPage {
+import { Page , Locator } from "@playwright/test";
 
-    constructor(page)
+
+export class LoginPage {
+
+    signInbutton: Locator;
+    userName: Locator;
+    password: Locator;
+
+
+    constructor(public page: Page)
     {
-        this.page = page;
         this.signInbutton= page.locator("input[value='Sign In']");
         this.userName = page.locator("input#userid");
         this.password = page.locator("input#pwd");
@@ -14,7 +21,7 @@ class LoginPage {
         await this.page.goto("https://myapexinternal.apexsystemsinc.com/psp/INTERNAL/?cmd=login&languageCd=ENG");
     }
    
-    async validLogin(username,password)
+    async validLogin(username:string,password:string)
     {
          await  this.userName.fill(username);
          await this.password.fill(password);
@@ -23,4 +30,3 @@ class LoginPage {
     }
     
     }
-    module.exports = {LoginPage};

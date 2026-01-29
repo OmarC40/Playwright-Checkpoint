@@ -1,13 +1,13 @@
-const {test, expect} = require('@playwright/test');
+import { test, expect } from '@playwright/test';
 const { sign } = require('crypto');
 const { waitForDebugger } = require('inspector');
-const { text } = require('stream/consumers');
+//import { text } = from('stream/consumers');
 
 // fixtures = global variables 
 // function() and ()=> = anonymous function or you can specify a function name 
 // JS is a async language, that means that all the methods will be executed randomly or at the same time 
 
-test.only('First Playwright Test', async function({browser})
+test('First Playwright Test', async ({browser})=>
 {
     //context= chrome - plugins/cookies, in this context all the plugins of my browser will be there to avoid this use the following to create a new context = a incognito mode
     const context = await browser.newContext();
@@ -37,8 +37,7 @@ test.only('First Playwright Test', async function({browser})
     
 
 });
-test('UI Controls', async function({page})
-{
+test("UI Controls", async({page})=>{
     // drop-down
     const dropdown = page.locator("select.from-control");
     await dropdown.selectOption('consult');
@@ -46,27 +45,30 @@ test('UI Controls', async function({page})
     await page.pause();
 
     // radio button
-    await expect(page.locator('.radiotextsty').click()).toBeChecked();
+    const checkbox =page.locator('.radiotextsty')
+
+    await  checkbox.check();
+    expect(checkbox).toBeChecked();
     
 });
 
-test("Child windows hadl", async function({browser})
+test("Child windows hadl", async ({browser})=>
 {
 // que debes hacer si tienes dos metodos que necesitan se ejecuatados uno tras otro, ya que JS es asincrono? respuesta: Promesas   
 // existen tres status de promesas pending, reject, fullfilled
     const context = await browser.newContext();
     const page = await context.newPage();
-    const userNAme = page.locator('#username');
-    await page.goto();
-    const documentLink = page.locator();
+    const userName = page.locator('#username');
+    await page.goto("");
+    const documentLink = page.locator("");
 
-    const [newPage] = Promise.all(
+    const [newPage] =await Promise.all(
     [
     context.waitForEvent('page'),// lsiten for any new page
     documentLink.click(),// new page is opened 
     ])
-    text = await newPage.locator('.red').allTextContent();
-    console.log(text); 
+    const texts = await newPage.locator('.red').allTextContents();
+    console.log(texts); 
 
 
 });
