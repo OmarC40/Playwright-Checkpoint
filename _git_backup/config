@@ -1,0 +1,11 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[branch "master"]
+	vscode-merge-base = origin/master
+	gk-last-accessed = 2026-01-29T06:28:11.834Z
+	gk-last-modified = 2026-01-29T06:28:11.834Z
