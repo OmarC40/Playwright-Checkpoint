@@ -12,7 +12,7 @@ export class LoginTime{
         this.userId=page.locator('("#userid")'),
         this.passwordTitle=page.locator('text=Password:')
         this.password=page.locator('("input[type="password"]")')
-        this.signInButton=page.locator('("input[type="submit"]")')
+        this.signInButton=page.locator("input[value='Sign In']")
     }
     
     async fillUseId(useridnumber: string) {
@@ -25,6 +25,10 @@ export class LoginTime{
 
     async clickLogin() {
         await this.signInButton.click();
+    }
+    async goTo()
+    {
+        await this.page.goto("https://myapexinternal.apexsystemsinc.com/psp/INTERNAL/?cmd=login&languageCd=ENG");
     }
     async login(useridnumber: string, password: string) {
         await this.fillUseId(useridnumber);

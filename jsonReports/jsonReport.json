@@ -66,14 +66,14 @@
   },
   "suites": [
     {
-      "title": "tests\\UIBasicstest.spec.js",
-      "file": "tests/UIBasicstest.spec.js",
+      "title": "tests\\LoginTime.test.ts",
+      "file": "tests/LoginTime.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "First Playwright Test",
-          "ok": false,
+          "title": "Login",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -84,64 +84,53 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 6,
                   "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 30208,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\tests\\UIBasicstest.spec.js",
-                        "column": 39,
-                        "line": 23
-                      },
-                      "message": "Error: locator.fill: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('input#input')\u001b[22m\n\n\n\u001b[0m \u001b[90m 21 |\u001b[39m     \u001b[90m//rules for locator: if the ID is present css -> tagname#id or #id\u001b[39m\n \u001b[90m 22 |\u001b[39m    \u001b[90m// await page.locator('input#input').type(\"playwright\") deprecated\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'input#input'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m\"rahulshetty\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"[type='password']\"\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m\"learning\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m signIn\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"[style*='block']\"\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Incorrect'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\tests\\UIBasicstest.spec.js:23:39\u001b[22m"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 5148,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-01-29T21:28:21.552Z",
+                  "startTime": "2026-02-03T23:16:04.104Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\test-results\\tests-UIBasicstest-First-Playwright-Test\\test-failed-1.png"
+                      "path": "C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\test-results\\tests-LoginTime-Login\\test-finished-1.png"
                     },
                     {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\test-results\\tests-UIBasicstest-First-Playwright-Test\\error-context.md"
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\test-results\\tests-LoginTime-Login\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\test-results\\tests-LoginTime-Login\\trace.zip"
                     }
                   ]
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
-          "id": "e3ccd8b1cb064a2b0312-fa0c6922df3badf71491",
-          "file": "tests/UIBasicstest.spec.js",
-          "line": 10,
-          "column": 6
+          "id": "aa7b692bc5b551253bb3-3432c4f58ee193cd076f",
+          "file": "tests/LoginTime.test.ts",
+          "line": 4,
+          "column": 5
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-01-29T21:28:17.707Z",
-    "duration": 39975.749,
-    "expected": 0,
+    "startTime": "2026-02-03T23:15:58.037Z",
+    "duration": 14756.621999999974,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }
