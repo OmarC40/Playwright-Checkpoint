@@ -84,15 +84,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 6,
+                  "workerIndex": 10,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5148,
+                  "duration": 34034,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-02-03T23:16:04.104Z",
+                  "startTime": "2026-02-04T23:09:37.803Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -118,7 +118,7 @@
           ],
           "id": "aa7b692bc5b551253bb3-3432c4f58ee193cd076f",
           "file": "tests/LoginTime.test.ts",
-          "line": 4,
+          "line": 6,
           "column": 5
         }
       ]
@@ -126,8 +126,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-02-03T23:15:58.037Z",
-    "duration": 14756.621999999974,
+    "startTime": "2026-02-04T23:09:31.404Z",
+    "duration": 47435.02299999818,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

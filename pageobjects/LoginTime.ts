@@ -9,9 +9,9 @@ export class LoginTime{
     
     constructor(public page:Page){
         this.userIdTitle=page.locator('text=User ID:')
-        this.userId=page.locator('("#userid")'),
+        this.userId=page.locator('[name="userid"]'),
         this.passwordTitle=page.locator('text=Password:')
-        this.password=page.locator('("input[type="password"]")')
+        this.password=page.locator('input[name="pwd"]')
         this.signInButton=page.locator("input[value='Sign In']")
     }
     
