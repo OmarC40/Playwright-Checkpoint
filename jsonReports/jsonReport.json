@@ -73,7 +73,7 @@
       "specs": [
         {
           "title": "Login",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -84,26 +84,47 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 10,
+                  "workerIndex": 1,
                   "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 34034,
-                  "errors": [],
+                  "status": "timedOut",
+                  "duration": 33919,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\tests\\LoginTime.test.ts",
+                        "column": 14,
+                        "line": 47
+                      },
+                      "message": "Error: page.waitForTimeout: Test timeout of 30000ms exceeded.\n\n\u001b[0m \u001b[90m 45 |\u001b[39m\n \u001b[90m 46 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m window\u001b[33m.\u001b[39mscrollBy(\u001b[35m500\u001b[39m\u001b[33m,\u001b[39m \u001b[35m0\u001b[39m))\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 47 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m7000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 48 |\u001b[39m\n \u001b[90m 49 |\u001b[39m\n \u001b[90m 50 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\tests\\LoginTime.test.ts:47:14\u001b[22m"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-02-04T23:09:37.803Z",
+                  "startTime": "2026-02-05T19:16:18.233Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\test-results\\tests-LoginTime-Login\\test-finished-1.png"
+                      "path": "C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\test-results\\tests-LoginTime-Login\\test-failed-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
                       "path": "C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\test-results\\tests-LoginTime-Login\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\test-results\\tests-LoginTime-Login\\error-context.md"
                     },
                     {
                       "name": "trace",
@@ -113,12 +134,12 @@
                   ]
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "aa7b692bc5b551253bb3-3432c4f58ee193cd076f",
           "file": "tests/LoginTime.test.ts",
-          "line": 6,
+          "line": 7,
           "column": 5
         }
       ]
@@ -126,11 +147,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-02-04T23:09:31.404Z",
-    "duration": 47435.02299999818,
-    "expected": 1,
+    "startTime": "2026-02-05T19:16:13.954Z",
+    "duration": 44278.009999999995,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
