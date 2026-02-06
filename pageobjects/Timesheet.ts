@@ -2,8 +2,9 @@ import { Page, Locator } from "@playwright/test";
 
 export class Timesheet {
   tableFrame;
-  businessUnitFrame;
-  projectIdFrame;
+  //businessUnitFrame;
+  //projectIdFrame;
+  //activityIdFrame;
 
   timeReportingCodeOption:Locator;
 
@@ -11,8 +12,8 @@ export class Timesheet {
 
   projectIdButton: Locator;
 
-  //activityId: Locator;
- // activityIdOptions: Locator;
+  activityIdButton: Locator;
+ 
 
   constructor(public page: Page) {
     this.tableFrame = page.frameLocator("#ptifrmtgtframe");
@@ -21,48 +22,26 @@ export class Timesheet {
 
     this.businessUnitButton = this.tableFrame.locator('[name="BUSINESS_UNIT_PC$prompt$0"]')
     
-    this.businessUnitFrame = page.frameLocator('iframe[id^="ptModFrame_0"]');
+    //this.businessUnitFrame = page.frameLocator('iframe[id^="ptModFrame_0"]');
 
     this.projectIdButton = this.tableFrame.locator('[name="AX_PROJECT_ID$prompt$0"]')
     
-    this.projectIdFrame = page.frameLocator('iframe[id^="ptModFrame_0"]');
+    //this.projectIdFrame = page.frameLocator('iframe[id^="ptModFrame_1"]');
+
+    this.activityIdButton=this.tableFrame.locator('[name="ACTIVITY_ID$prompt$0"]')
+
+    //this.activityIdFrame = page.frameLocator('iframe[id^="ptModFrame_2"]');
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
-    
-
-
-
-
-   // this.projectIdOptions = 
-
-   // this.activityIdOptions =
+  
   }
 
   async selectTRC(value: string) {
     await this.timeReportingCodeOption.selectOption({ value });
   }
-
+/*
   lookupBussinessUnitPC(text: string): Locator {
   return this.businessUnitFrame.getByText(text, { exact: true });
 }
@@ -73,55 +52,51 @@ async selectLookupOptionBussinessUnitPC(text: string) {
 }
 
 lookupProjectID(text: string): Locator {
-  return this.businessUnitFrame.getByText(text, { exact: true });
+  return this.projectIdFrame.getByText(text, { exact: true });
 }
 
 async selectLookupOptionProjectID(text: string) {
-  await this.businessUnitButton.click();
-  await this.lookupBussinessUnitPC(text).click();
+  await this.projectIdButton.click();
+  await this.lookupProjectID(text).click();
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-  async selectTimeReportingCode(labelText: string) {
-    await this.timeReportingCode.selectOption({ label: labelText });
-  }
-  optionBusinessUnit(value: string): Locator {
-    return this.businessUnitFrame.getByRole("link", { name: value });
-    
-  }
-
-  async selectBusinessUnitOption(value: string) {
-  await this.lookupSearchInput.fill(value);
-  await this.lookupSearchButton.click();
-  await this.optionByText(value).click();
+lookupActivityID(text: string): Locator {
+  return this.activityIdFrame.getByText(text, { exact: true });
 }
 
-
-
-  async fillWeekdaysWith8(row = 0) {
+async selectLookupOptionActivityID(text: string) {
+  await this.activityIdButton.click();
+  await this.lookupActivityID(text).click();
+}
+*/
+async fillWeekdaysWith8(row = 0) {
     for (let day = 2; day <= 6; day++) {
       const cell = this.tableFrame.locator(`[name="QTY_DAY${day}$${row}"]`);
       await cell.fill("8");
       await cell.press("Tab");
     }
-  }*/
+  }
+
+//-------------------------------
+getLookupFrame() {
+  return this.page.frameLocator('iframe[id^="ptModFrame_"]:visible');
+}
+
+async selectLookupOption(button: Locator, text: string) {
+  await button.click();
+  const lookupFrame = this.getLookupFrame();
+  await lookupFrame.getByText(text, { exact: true }).click();
+
+}
+async selectLookupOptionBussinessUnitPC(text: string) {
+    await this.selectLookupOption(this.businessUnitButton, text);
+  }
+
+  async selectLookupOptionProjectID(text: string) {
+    await this.selectLookupOption(this.projectIdButton, text);
+  }
+
+  async selectLookupOptionActivityID(text: string) {
+    await this.selectLookupOption(this.activityIdButton, text);
+  }
 }

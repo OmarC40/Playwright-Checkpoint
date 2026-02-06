@@ -5,6 +5,7 @@ import { Timesheet } from '../pageobjects/Timesheet';
 import creds from '../utils/TestDataLoginPage.json';
 
 test('Login', async ({ page, baseURL }) => {
+  test.setTimeout(120_000);
   const login = new LoginTime(page);
   const dash = new DashBoard(page);
   const time = new Timesheet(page);
@@ -36,15 +37,19 @@ test('Login', async ({ page, baseURL }) => {
   await expect(dash.reportTime).toBeVisible();   
   await dash.clickReportTime();
   await expect(dash.timesheet).toBeVisible();      
-  await dash.clickTimeSheet()
-
-  await page.waitForTimeout(7000);
-
+  await Promise.all([
+  page.waitForNavigation({ waitUntil: "domcontentloaded" }),
+  dash.clickTimeSheet(),
+]);
+  await time.fillWeekdaysWith8()
   await time.selectTRC("MHRSI");
-  await time.selectLookupOptionBussinessUnitPC("12000");
+  await time.selectLookupOptionBussinessUnitPC("APCSV");
+  await time.selectLookupOptionProjectID("10611");
+  await time.selectLookupOptionActivityID("NB_HRS");
 
   await page.evaluate(() => window.scrollBy(500, 0));
   await page.waitForTimeout(7000);
+  
 
 
 });
