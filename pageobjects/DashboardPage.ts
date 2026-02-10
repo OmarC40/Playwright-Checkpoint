@@ -43,6 +43,9 @@ export class DashBoard {
     async clickTimeSheet() {
         await this.timesheet.click();
     }
+    async validDashboard() {
+        
+    }
     
     
     }

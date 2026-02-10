@@ -20,8 +20,8 @@ test('First Playwright Test', async ({browser})=>
     // locator css playwright only support CSS
     //rules for locator: if the ID is present css -> tagname#id or #id
    // await page.locator('input#input').type("playwright") deprecated
-    await page.locator('input#input').fill("rahulshetty");
-    await page.locator("[type='password']").fill("learning");
+    await page.locator('#username').fill("rahulshetty");
+    await page.locator('#password').fill("learning");
     await signIn.click();
     await expect(page.locator("[style*='block']")).toContainText('Incorrect');
     await userNAme.fill("");
