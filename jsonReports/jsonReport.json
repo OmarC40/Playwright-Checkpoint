@@ -66,75 +66,59 @@
   },
   "suites": [
     {
-      "title": "tests\\UIBasicstest.test.ts",
-      "file": "tests/UIBasicstest.test.ts",
+      "title": "tests\\LoginTime.test.ts",
+      "file": "tests/LoginTime.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "UI Controls",
-          "ok": false,
+          "title": "Login",
+          "ok": true,
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 120000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "",
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 8,
+                  "workerIndex": 14,
                   "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 40111,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\tests\\UIBasicstest.test.ts",
-                        "column": 20,
-                        "line": 43
-                      },
-                      "message": "Error: locator.selectOption: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('select.from-control')\u001b[22m\n\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[90m// drop-down\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m dropdown \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"select.from-control\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m dropdown\u001b[33m.\u001b[39mselectOption(\u001b[32m'consult'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[90m// playwright inspector = debuger\u001b[39m\n \u001b[90m 45 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mpause()\u001b[33m;\u001b[39m\n \u001b[90m 46 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\tests\\UIBasicstest.test.ts:43:20\u001b[22m"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 55521,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-02-10T23:24:41.530Z",
+                  "startTime": "2026-02-11T23:00:04.808Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\test-results\\tests-UIBasicstest-UI-Controls\\test-failed-1.png"
+                      "path": "C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\test-results\\tests-LoginTime-Login\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\test-results\\tests-UIBasicstest-UI-Controls\\video.webm"
+                      "path": "C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\test-results\\tests-LoginTime-Login\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\test-results\\tests-UIBasicstest-UI-Controls\\trace.zip"
+                      "path": "C:\\Users\\ocuarenta\\Desktop\\Checkpoint Playwright\\Playwright-Checkpoint\\test-results\\tests-LoginTime-Login\\trace.zip"
                     }
                   ]
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
-          "id": "548e4e17127c622e49a2-c9855f5cfa82d6c4da82",
-          "file": "tests/UIBasicstest.test.ts",
-          "line": 40,
+          "id": "aa7b692bc5b551253bb3-3432c4f58ee193cd076f",
+          "file": "tests/LoginTime.test.ts",
+          "line": 7,
           "column": 5
         }
       ]
@@ -142,11 +126,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-02-10T23:24:31.557Z",
-    "duration": 55473.72899999982,
-    "expected": 0,
+    "startTime": "2026-02-11T22:59:57.212Z",
+    "duration": 71787.69299999997,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }

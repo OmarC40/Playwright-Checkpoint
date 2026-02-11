@@ -10,13 +10,13 @@ const { waitForDebugger } = require('inspector');
 test('First Playwright Test', async ({browser})=>
 {
     //context= chrome - plugins/cookies, in this context all the plugins of my browser will be there to avoid this use the following to create a new context = a incognito mode
+    test.setTimeout(120000)
     const context = await browser.newContext();
     const page = await context.newPage();
     const userNAme = page.locator('#username');
     const signIn = page.locator('#signInBtn');
     const CardTitle = page.locator(".card-body a");
-    await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
-    await page.title();
+    await page.goto("https://rahulshettyacademy.com/loginpagePractise/",{waitUntil:'domcontentloaded'});
     // locator css playwright only support CSS
     //rules for locator: if the ID is present css -> tagname#id or #id
    // await page.locator('input#input').type("playwright") deprecated
@@ -26,22 +26,22 @@ test('First Playwright Test', async ({browser})=>
     await expect(page.locator("[style*='block']")).toContainText('Incorrect');
     await userNAme.fill("");
     await userNAme.fill("rahulshettyacademy");
-    await signIn.click();
     //console.log(await CardTitle.first().textContent());
     // console.log(await CardTitle.nth().textContent());
     // intelligent waits
-    await page.waitForLoadState('networkidle');
+    //await page.waitForLoadState('networkidle');
     const allTitles = await CardTitle.allTextContents();
     console.log(allTitles);
 
     
 
 });
-test("UI Controls", async({page})=>{
+/*test("UI Controls", async({page})=>{
     // drop-down
     const dropdown = page.locator("select.from-control");
     await dropdown.selectOption('consult');
     // playwright inspector = debuger
+    await page.goto("");
     await page.pause();
 
     // radio button
@@ -71,4 +71,4 @@ test("Child windows hadl", async ({browser})=>
     console.log(texts); 
 
 
-});
+});*/
